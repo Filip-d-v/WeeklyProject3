@@ -65,8 +65,6 @@ namespace AssetTracking
             }
         }
     }
-
-    // Class representing a computer
     public class Computer : Item
     {
         public Computer(string name, DateTime purchaseDate, decimal priceUSD, Office officeLocation)
@@ -74,8 +72,6 @@ namespace AssetTracking
         {
         }
     }
-
-    // Class representing a phone
     public class Phone : Item
     {
         public Phone(string name, DateTime purchaseDate, decimal priceUSD, Office officeLocation)
@@ -125,8 +121,7 @@ namespace AssetTracking
             }
         }
         static void DisplayList(List<Item> items)
-        {
-            // Sort the items using LINQ
+        {           
             var sortedItems = items.OrderBy(item =>
             {
                 if (item is Computer)
@@ -158,7 +153,7 @@ namespace AssetTracking
 
                 Console.WriteLine($"| {type,-10} | {name,-25} | {currencySymbol}{price,-17} | {office,-10} | {date,-9} |");
 
-                Console.ResetColor(); // Reset color to default
+                Console.ResetColor();
             }
 
             Console.WriteLine("======================================================================================");
@@ -174,7 +169,7 @@ namespace AssetTracking
             Console.WriteLine("Enter your choice:");
             string choice = Console.ReadLine();
 
-            Console.Clear(); // Clear the console screen before adding a new item
+            Console.Clear();
 
             Console.WriteLine("Enter item name:");
             string name = Console.ReadLine();

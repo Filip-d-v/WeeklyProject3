@@ -163,7 +163,7 @@ namespace AssetTracking
 
         static void AddNewItem(List<Item> items)
         {
-            Console.WriteLine("Add a new item:");
+            Console.WriteLine("Is it a Computer or Phone you would like to add? :");
             Console.WriteLine("1. Computer");
             Console.WriteLine("2. Phone");
             Console.WriteLine("Enter your choice:");
@@ -171,7 +171,7 @@ namespace AssetTracking
 
             Console.Clear();
 
-            Console.WriteLine("Enter item name:");
+            Console.WriteLine("Enter name:");
             string name = Console.ReadLine();
 
             Console.WriteLine("Enter purchase date (yyyy-MM-dd):");
